@@ -3,6 +3,21 @@ class SelectionSort {
         int n = arr.length;
 
        // STUDENT TODO
+        boolean swap = false;
+
+        do {
+            swap = false;
+
+            for(int i = 1; i < n; i++) {
+                if(arr[i-1] > arr[i]) {
+                    int temp = arr[i];
+                    arr[i] = arr[i-1];
+                    arr[i-1] = temp;
+                    swap = true;
+                }
+            }
+            n--;
+        } while(swap);
     }
 
     public static void main(String[] args) {
